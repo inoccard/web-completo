@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>D</title>
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Your custom script here -->
+    <script type="text/babel">
+        /* função anonima, que não tem nome
+        let quadrado = function(x=5) {
+            return x*x;
+        }*/
+
+        /*
+        É o sinal de => que forma uma arrow function (flexa)
+        let quadrado = (x = 5) => {
+            return x*x;
+        }*/
+
+        /*se estiver recebendo apenas um único parámetro, 
+        mas se não estiver recebendo, ou se receber mais de um
+        (x,y) precisa de parenteses*/
+        let quadrado = x => x*x; // return implicito, 
+
+        document.write(quadrado(3)) // chamar a função contida na variárel
+        
+        /*
+        arrow function com operador ternário
+         let parOrImpar = numero => numero%2 === 0 ? 'par' : 'impar'
+         document.write(parOrImpar(4)) */ 
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>
