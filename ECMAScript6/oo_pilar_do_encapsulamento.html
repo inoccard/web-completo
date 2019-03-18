@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      
+      class Tv {
+        constructor() {
+          /*atributos com "_" têm a convesão de private, mas private ainda não existe 
+          no javascript. Atributos desse tipo, não impedem de ser acessados diretamente,
+          mas indica que é convencional acessaa-los via getters e setters*/
+          this._relacaoCanais = Array(2, 4, 5, 7, 10)
+          this._canalAtivo = 5
+          this._volume = 5
+        }
+
+        //getters setters
+        get canalAtivo() {
+          return this._canalAtivo
+        }
+
+        set canalAtivo(canal) {
+          //indeOf retorna o índice do array e atribui para _canalAtivo
+          if(this._relacaoCanais.indexOf(canal) !== -1) {
+            this._canalAtivo = canal  
+          }        
+          
+        }
+      }
+
+      let tv = new Tv()
+
+      tv.canalAtivo = 7 // para chamar o set não precisa de parenteses
+      console.log(tv.canalAtivo) // para chamar o get não precisa de parenteses
+
+    </script>
+    
+  </head>
+  <body>
+    <div id="output"></div>
+  </body>
+</html>
