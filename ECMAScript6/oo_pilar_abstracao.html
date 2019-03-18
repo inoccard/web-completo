@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conta Bancaria</title>
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Your custom script here -->
+    <script type="text/babel">
+        
+        // modelo do objecto
+        class ContaBancaria{
+            
+            constructor(){
+                this.agencia = 1705
+                this.numeroConta = 986898
+                this.saldo = 50
+                this.limite = 450
+            }
+            /*essa sintaxe abaixo só está desponivel para o ES6 com babel*/
+            depositar(valorDeposito){
+                this.saldo += valorDeposito
+            }
+
+            sacar(valorSaque){
+                this.saldo -= valorSaque
+            }
+
+            consultarSaldo(){
+                return this.saldo
+            }
+        }
+        /*a classe não é um objeto, é apenas um modelo que serve
+        para geração de vários objetos*/
+        let conta = new ContaBancaria()
+        console.log(conta.consultarSaldo())
+        conta.depositar(40)
+        console.log(conta.consultarSaldo())
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>
