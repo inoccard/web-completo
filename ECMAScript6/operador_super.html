@@ -21,7 +21,12 @@
       
       class Passaro extends Animal {
         constructor(bico, cor, tamanho, peso) {
+<<<<<<< HEAD
           super(cor, tamanho, peso)
+=======
+          /*Passando parametros no super para o construtor da class Animal receber*/
+          super(cor, tamanho, peso) // o super() dá acesso à class pai (Animal) atribuindo parametros
+>>>>>>> f511233beafee8f7025d737a46ba18db8ad4c0bb
           this.bico = bico
         }
 
@@ -33,7 +38,11 @@
 
       class Papagaio extends Passaro {
         constructor(sabeFalar, cor, tamanho, peso) {
+<<<<<<< HEAD
           super('Médio', cor, tamanho, peso)
+=======
+          super('Medio', cor, tamanho, peso)
+>>>>>>> f511233beafee8f7025d737a46ba18db8ad4c0bb
           this.sabeFalar = sabeFalar
         }
 
